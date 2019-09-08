@@ -15,3 +15,20 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing ???????
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+// ================================================================================
+// ROUTER
+// Below codes tells to the server routes files that I am going to use
+// These routes give the server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
+require("./routing/apiRoutes.js")(app);
+require("./routing/htmlRoutes.js")(app);
+
+// =============================================================================
+// LISTENER
+// The below code starts the server
+// =============================================================================
+
+app.listen(PORT, function() {
+    console.log("FriendFinder is listening on PORT: " + PORT);
+});
