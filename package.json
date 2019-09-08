@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Aizadik/FriendFinder#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0"
   }
 }

@@ -10,10 +10,12 @@ var path = require("path");
 var app = express();
 
 // Sets an initial port that we are going to use in our listener
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8081;
 
-// Sets up the Express app to handle data parsing ???????
+// this line line return decoded url in json format
 app.use(express.urlencoded({ extended: true }));
+
+// returns req.body in json format
 app.use(express.json());
 
 // ================================================================================
@@ -21,8 +23,8 @@ app.use(express.json());
 // Below codes tells to the server routes files that I am going to use
 // These routes give the server a "map" of how to respond when users visit or request data from various URLs.
 // ================================================================================
-// require("./routing/apiRoutes.js")(app);
-// require("./routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes")(app);
+//require("./routing/htmlRoutes.js")(app);
 
 // =============================================================================
 // LISTENER
