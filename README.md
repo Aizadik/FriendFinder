@@ -7,3 +7,5 @@
 * The app is deployed in Heroku.
 
 * Enjoy now and find the Best match!
+
+![Image description](app/image/readMe.png)
